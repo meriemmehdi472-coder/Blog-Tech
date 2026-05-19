@@ -1,0 +1,159 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const projets = [
+  {
+    title: "AdAction",
+    description: "AdAction est une plateforme web qui aide les associations à organiser leurs collectes de déchets.",
+    stack: ["Web", "Association", "Écologie"],
+    github: "https://github.com/adatechschool/frida-adaction-samirmeriemjosephine",
+    demo: "https://adaction-one.vercel.app/",
+    video: "#",
+  },
+  {
+    title: "Logisim",
+    description: "Simulateur de circuits logiques pour comprendre le fonctionnement des portes logiques.",
+    stack: ["Logique", "Circuits", "Simulation"],
+    github:  "https://gitlab.sorbonne-paris-nord.fr/ndy_code/archsimul_aknymd.git",
+    demo: "#",
+    video: "#",
+  },
+  {
+    title: "AdaCheckEvent",
+    description: "Application qui affiche les événements publics de Paris grâce à l’API officielle.",
+    stack: ["API", "JavaScript", "Paris Open Data"],
+    github:"https://github.com/meriemmehdi472-coder/AdaCheckevent",
+    demo: "https://adacheckevent-one.vercel.app/",
+    video: "#",
+  },
+  {
+    title: "AdaMarket",
+    description: "Marketplace e-commerce permettant de présenter et gérer des produits.",
+    stack: ["E-commerce", "Marketplace", "Web"],
+    github: "https://github.com/meriemmehdi472-coder/Market",
+    demo:"https://frida-marketplace-8dm3.vercel.app/",
+    video: "#",
+  },
+  {
+    title: "Éditeur photo / vidéo",
+    description: "Projet autour de l’édition de médias : modification, aperçu et manipulation de contenus visuels.",
+    stack: ["Photo", "Vidéo", "Interface"],
+    github: "https://github.com/meriemmehdi472-coder/pixselsim-studio",
+    demo: "https://pixselforge.onrender.com",
+    video: "#",
+  },
+  {
+    title: "Projet plateforme clinique",
+    description:
+      "Participation au développement d’une plateforme web dans le domaine de la santé au cours de mon alternance chez Cliking. Ce projet me permet de travailler sur une base de code existante, de collaborer en équipe et d’approfondir mes compétences en développement web sur un projet concret.",
+    stack: ["Développement web", "Maintenance", "Produit"],
+    github: "",
+    demo: "",
+    video: "",
+  },
+];
+---
+
+<BaseLayout title="Mes projets">
+  <section class="projects-hero">
+    <h1>Mes projets</h1>
+    <p>
+      Voici une sélection de projets réalisés pendant ma formation et mon parcours
+      en développement web. Chaque projet représente une étape de mon apprentissage.
+    </p>
+  </section>
+
+  <section class="projects-grid">
+    {projets.map((projet) => (
+      <article class="project-card">
+        <div>
+          <h2>{projet.title}</h2>
+          <p>{projet.description}</p>
+        </div>
+
+        <ul class="stack">
+          {projet.stack.map((tech) => (
+            <li>{tech}</li>
+          ))}
+        </ul>
+
+        <div class="links">
+          <a href={projet.github}>Voir le projet</a>
+          <a href={projet.demo}>Voir la démo</a>
+          <a href={projet.video}>Voir la vidéo</a>
+        </div>
+      </article>
+    ))}
+  </section>
+
+  <section class="contact">
+    <h2>Contactez-moi</h2>
+    <p>
+      Je suis toujours en train d’améliorer mes projets et d’en ajouter de nouveaux.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .projects-hero {
+    margin-bottom: 3rem;
+  }
+
+  .projects-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    background: #fff;
+  }
+
+  .project-card h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .stack li {
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    background: #f3f3f3;
+    font-size: 0.85rem;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .links a {
+    padding: 0.6rem 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .contact {
+    margin-top: 4rem;
+  }
+</style>
