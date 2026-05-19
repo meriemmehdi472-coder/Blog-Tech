@@ -20,9 +20,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
 
     <div class="buttons">
-      <a href="/about">À propos</a>
-      <a href="/parcours">Mon parcours</a>
-      <a href="/blog">Lire le blog</a>
+      <a href={`${import.meta.env.BASE_URL}about`}>À propos</a>
+      <a href={`${import.meta.env.BASE_URL}parcours`}>Mon parcours</a>
+      <a href={`${import.meta.env.BASE_URL}blog`}>Lire le blog</a>
     </div>
   </section>
 
