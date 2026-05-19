@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Mes apprentissages">
+  <section>
+    <h1>Mes apprentissages</h1>
+
+    <p>
+      Cette page rassemble les notions, outils et technologies que j’apprends au
+      cours de ma formation et de mon alternance.
+    </p>
+
+    <div class="grid">
+      <article>
+        <h2>HTML & CSS</h2>
+        <p>Structurer une page web, créer des interfaces propres et responsive.</p>
+      </article>
+
+      <article>
+        <h2>JavaScript</h2>
+        <p>Comprendre la logique, manipuler le DOM et rendre les pages interactives.</p>
+      </article>
+
+      <article>
+        <h2>Git & GitHub</h2>
+        <p>Versionner mon code, travailler proprement et publier mes projets.</p>
+      </article>
+
+      <article>
+        <h2>Astro</h2>
+        <p>Créer un site statique rapide pour documenter mon parcours.</p>
+      </article>
+
+      <article>
+        <h2>React / Vue</h2>
+        <p>Découvrir les composants et les interfaces modernes.</p>
+      </article>
+
+      <article>
+        <h2>Bonnes pratiques</h2>
+        <p>Écrire du code lisible, organisé et maintenable.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  article {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+  }
+</style>
