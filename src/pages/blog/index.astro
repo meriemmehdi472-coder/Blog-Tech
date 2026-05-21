@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<BaseLayout title="Blog">
+  <section class="blog-list">
+    <h1>Blog</h1>
+    {posts.map((post) => (
+      <article>
+        <a href={`${import.meta.env.BASE_URL}blog/${post.id}/`}>
+          <h2>{post.data.title}</h2>
+          <p>{post.data.description}</p>
+          <time>{new Date(post.data.pubDate).toLocaleDateString('fr-FR')}</time>
+        </a>
+      </article>
+    ))}
+  </section>
+</BaseLayout>
