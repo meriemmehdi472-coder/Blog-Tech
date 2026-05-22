@@ -15,22 +15,39 @@ const today = new Date();
 </footer>
 <style>
 	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-	}
+  padding: 3rem 1rem;
+  background: linear-gradient(180deg, #0f172a, #111827);
+  color: #cbd5e1;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.3rem;
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  box-shadow: 0 8px 30px rgba(124, 58, 237, 0.25);
+  transition: all 0.25s ease;
+  font-weight: 600;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(124, 58, 237, 0.4);
+}
+
+.social-links svg {
+  fill: currentColor;
+}
 </style>
